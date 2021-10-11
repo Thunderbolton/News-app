@@ -12,14 +12,6 @@ app.listen(port, () => {
   console.log(`app listening on ${port}`)
 })
 
-if(process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
-
 app.get('/uk', async (req, res) => {
   const url = `https://newsapi.org/v2/everything?q=(UK OR United Kingdom OR Britain OR England OR Scotland OR Wales OR London)&from=2021-10-04&domains=bbc.co.uk,theguardian.com,dailymail.co.uk&language=en&apiKey=${api_key}`;
   
@@ -148,3 +140,11 @@ app.get('/world', async (req, res) => {
   
   res.send({ response });
 });
+
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
