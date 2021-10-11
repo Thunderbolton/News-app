@@ -9,7 +9,7 @@ const api_key = process.env.API_KEY;
 
 
 app.listen(port, () => {
-  console.log(`app listening on http://localhost:${port}`)
+  console.log(`app listening on ${port}`)
 })
 
 if(process.env.NODE_ENV === 'production') {
