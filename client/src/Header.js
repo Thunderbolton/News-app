@@ -30,7 +30,7 @@ const Header = () => {
         <div className={classes.header}>  
             <AppBar elevation={0}>
                 <Toolbar className={classes.toolbar}>
-                            <Typography variant="h6">News App</Typography>
+                            <Typography variant="h6">Read the Latest</Typography>
                                 <WhatshotIcon className={classes.logo}></WhatshotIcon>
                             <Typography className={classes.date} variant="subtitle2">
                                 {date.toDateString()}
