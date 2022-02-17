@@ -18,7 +18,7 @@ import loadingIcon from "./img/animat-search-color.gif";
 
 const News = ({showCategories, showCountries}) => {
 
-    const useStyles = makeStyles({
+    const useStyles = makeStyles(theme => ({
         loadingIcon: {
             width: 100,
             display:"block",
@@ -46,12 +46,22 @@ const News = ({showCategories, showCountries}) => {
         newsCard: {
             width: 400,
             height: 350,
+
+            // custom styling at smaller breakpoints
+            [theme.breakpoints.down("sm")]:{
+                marginLeft: "auto", 
+            },
+            [theme.breakpoints.down("xs")]:{
+                width: 280,
+                marginLeft: 1, 
+            }  
+            
         },
-      });
+      }));
 
     const classes = useStyles();
 
-    const matches = useMediaQuery("(min-width:1210px)"); // For screen orientation
+    const matches = useMediaQuery("(min-width:1210px)"); // For screen orientation of countries-categories menu. Changes to vertical display when under 1210px.
 
     const [articles, setArticles] = useState([]); // For setting the news coming in from the fetch call
 
