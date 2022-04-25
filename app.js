@@ -50,7 +50,7 @@ app.get('/australia', async (req, res) => {
 });
 
 app.get('/japan', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=(Japan OR Tokyo Or Osaka OR Fukuoka OR Okinawa)&from=2022-04-24&domains=japantimes.co.jp,nhk.or.jp,mainichi.jp&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=(Japan OR Tokyo Or Osaka OR Fukuoka OR Okinawa)&from=2022-04-25&domains=japantimes.co.jp,nhk.or.jp,mainichi.jp&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
@@ -68,7 +68,7 @@ app.get('/saudiarabia', async (req, res) => {
 });
 
 app.get('/china', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=(China OR Beijing OR Shanghai OR Shenzhen OR Guangzhou)&from=2022-04-24&domains=globaltimes.cn,scmp.com&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=(China OR Beijing OR Shanghai OR Shenzhen OR Guangzhou)&from=2022-04-25&domains=globaltimes.cn,scmp.com&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
@@ -78,7 +78,7 @@ app.get('/china', async (req, res) => {
 
 
 app.get('/coronavirus', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=covid&from=2022-04-24&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=covid&from=2022-04-25&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
@@ -124,7 +124,7 @@ app.get('/technology', async (req, res) => {
 });
 
 app.get('/politics', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=politics&from=2022-04-24&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=politics&from=2022-04-25&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
@@ -133,7 +133,7 @@ app.get('/politics', async (req, res) => {
 });
 
 app.get('/world', async (req, res) => { 
-  const url = `https://newsapi.org/v2/top-headlines?category=general&from=2022-04-24&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/top-headlines?category=general&from=2022-04-25&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
