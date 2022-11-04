@@ -17,6 +17,7 @@ const Cards = () => {
         media: {
             height: 180,
             paddingTop: "60%",
+            
         },
         container: {
             display: "flex",
