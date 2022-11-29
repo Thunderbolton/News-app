@@ -157,7 +157,7 @@ app.get('/world', async (req, res) => {
 });
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static('client'));
 
   app.get('*', (req, res) => {
   const index = path.join(__dirname, 'client', 'index.html');
