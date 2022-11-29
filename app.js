@@ -17,10 +17,14 @@ const api_key = process.env.API_KEY;
 
 app.use(express.static('client/build'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', '/index.html'));
-});
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'client', 'build', '/index.html'));
+// });
 
+app.get('*', (req, res) => {
+  const index = path.join(__dirname, 'build', 'index.html');
+  res.sendFile(index);
+});
 
 app.listen(port, () => {
   console.log(`app listening on ${port}`)
