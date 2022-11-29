@@ -12,7 +12,6 @@ const api_key = process.env.API_KEY;
 // });
 
 
-
 // app.get('/', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'client', 'build', '/index.html'));
 // });
@@ -157,8 +156,8 @@ app.get('/world', async (req, res) => {
   res.send({ response });
 });
 
-if(process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build/public'));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
 
   app.get('*', (req, res) => {
   const index = path.join(__dirname, 'client', 'index.html');
