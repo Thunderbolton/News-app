@@ -17,12 +17,12 @@ const api_key = process.env.API_KEY;
 //   res.sendFile(path.join(__dirname, 'client', 'build', '/index.html'));
 // });
 
-app.use(express.static('client'));
+// app.use(express.static('public'));
 
-app.get('*', (req, res) => {
-  const index = path.join(__dirname, 'client', 'index.html');
-  res.sendFile(index);
-});
+// app.get('*', (req, res) => {
+//   const index = path.join(__dirname, 'client', 'index.html');
+//   res.sendFile(index);
+// });
 
 app.listen(port, () => {
   console.log(`app listening on ${port}`)
@@ -157,6 +157,11 @@ app.get('/world', async (req, res) => {
   res.send({ response });
 });
 
-// if(process.env.NODE_ENV === 'production') {
-  
-// }
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static('public'));
+
+  app.get('*', (req, res) => {
+  const index = path.join(__dirname, 'client', 'index.html');
+  res.sendFile(index);
+});
+}
