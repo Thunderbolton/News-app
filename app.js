@@ -11,11 +11,13 @@ const api_key = process.env.API_KEY;
 //   res.send("Hello World!");
 // });
 
-// app.use(express.static('client/build'));
+
 
 // app.get('/', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'client', 'build', '/index.html'));
 // });
+
+app.use(express.static('client/build'));
 
 app.get('*', (req, res) => {
   const index = path.join(__dirname, 'build', 'index.html');
