@@ -154,6 +154,10 @@ app.get('/world', async (req, res) => {
   res.send({ response });
 });
 
+app.listen(port, () => {
+  console.log(`app listening on ${port}`)
+});
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 
@@ -163,7 +167,5 @@ if (process.env.NODE_ENV === 'production') {
 });
 }
 
-app.listen(port, () => {
-  console.log(`app listening on ${port}`)
-})
+
 //
