@@ -7,9 +7,9 @@ const port = process.env.PORT || 5000;
 
 const api_key = process.env.API_KEY;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello World!");
+// });
 
 
 // app.get('/', (req, res) => {
@@ -163,7 +163,7 @@ if (process.env.NODE_ENV === 'production') {
 
   app.get('*', (req, res) => {
   
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
 });
 }
 
