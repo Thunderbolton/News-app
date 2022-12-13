@@ -23,9 +23,7 @@ const api_key = process.env.API_KEY;
 //   res.sendFile(index);
 // });
 
-app.listen(port, () => {
-  console.log(`app listening on ${port}`)
-})
+
 
 app.get('/uk', async (req, res) => {
   const url = `https://newsapi.org/v2/everything?q=(UK OR United Kingdom OR Britain OR England OR Scotland OR Wales OR London)&from=2022-11-26&domains=bbc.co.uk,theguardian.com,dailymail.co.uk&language=en&apiKey=${api_key}`;
@@ -164,4 +162,8 @@ if (process.env.NODE_ENV === 'production') {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 }
+
+app.listen(port, () => {
+  console.log(`app listening on ${port}`)
+})
 //
