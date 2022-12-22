@@ -163,8 +163,8 @@ app.listen(port, () => {
 
   app.get('*', (req, res) => {
   
-  res.sendFile('./index.html')
-})
+  res.sendFile('index.html', { root: __dirname });
+});
 // } else {
 //   app.get('/', (req, res) => res.send('Set to production'))
 // }
