@@ -1,5 +1,5 @@
-require('dotenv').config();
 const express = require('express');
+const dotenv = require('dotenv').config;
 const fetch = require('node-fetch');
 const app = express();
 const path = require('path');
