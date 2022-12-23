@@ -24,9 +24,9 @@ const api_key = process.env.API_KEY;
 // });
 
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-});
+// app.get('/', function(req, res) {
+//   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+// });
 
 
 app.get('/uk', async (req, res) => {
@@ -167,8 +167,8 @@ app.listen(port, () => {
 
   app.get('*', (req, res) => {
   
-  res.sendFile(path.join(__dirname, "./client/build/index.html"))
-})
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 // } else {
 //   app.get('/', (req, res) => res.send('Set to production'))
 // }
