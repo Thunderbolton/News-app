@@ -9,7 +9,7 @@ const api_key = process.env.API_KEY;
 
 
 app.get('/uk', async (req, res) => {
-  const url = `https://newsapi.org/v2/everything?q=(UK OR United Kingdom OR Britain OR England OR Scotland OR Wales OR London)&from=2023-02-06&domains=bbc.co.uk,theguardian.com,dailymail.co.uk&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=(UK OR United Kingdom OR Britain OR England OR Scotland OR Wales OR London)&from=2023-02-13&domains=bbc.co.uk,theguardian.com,dailymail.co.uk&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
 
@@ -19,7 +19,7 @@ app.get('/uk', async (req, res) => {
 });
 
 app.get('/usa', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=(USA OR United States)&from=2023-02-06&domains=cnn.com,axios.com,nbcnews.com&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=(USA OR United States)&from=2023-02-13&domains=cnn.com,axios.com,nbcnews.com&language=en&apiKey=${api_key}`;
 
   const response = await fetch(url)
   .then(res => res.json())  
@@ -28,7 +28,7 @@ app.get('/usa', async (req, res) => {
 });
 
 app.get('/canada', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=(Canada OR Toronto OR Vancouver)&from=2023-02-06&domains=ctvnews.ca,globalnews.ca,thestar.com&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=(Canada OR Toronto OR Vancouver)&from=2023-02-13&domains=ctvnews.ca,globalnews.ca,thestar.com&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
@@ -37,7 +37,7 @@ app.get('/canada', async (req, res) => {
 });
 
 app.get('/australia', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=(Australia OR Queensland OR New South Wales)&from=2023-02-06&domains=abc.net.au,9news.com.au,smh.com.au&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=(Australia OR Queensland OR New South Wales)&from=2023-02-13&domains=abc.net.au,9news.com.au,smh.com.au&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
@@ -46,7 +46,7 @@ app.get('/australia', async (req, res) => {
 });
 
 app.get('/japan', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=(Japan OR Tokyo Or Osaka OR Fukuoka OR Okinawa)&from=2023-02-06&domains=japantimes.co.jp,nhk.or.jp,mainichi.jp&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=(Japan OR Tokyo Or Osaka OR Fukuoka OR Okinawa)&from=2023-02-13&domains=japantimes.co.jp,nhk.or.jp,mainichi.jp&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
@@ -64,7 +64,7 @@ app.get('/saudiarabia', async (req, res) => {
 });
 
 app.get('/china', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=(China OR Beijing OR Shanghai OR Shenzhen OR Guangzhou)&from=2023-02-06&domains=globaltimes.cn,scmp.com&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=(China OR Beijing OR Shanghai OR Shenzhen OR Guangzhou)&from=2023-02-13&domains=globaltimes.cn,scmp.com&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
@@ -74,7 +74,7 @@ app.get('/china', async (req, res) => {
 
 
 app.get('/coronavirus', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=covid&from=2023-02-06&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=covid&from=2023-02-13&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
@@ -120,7 +120,7 @@ app.get('/technology', async (req, res) => {
 });
 
 app.get('/politics', async (req, res) => { 
-  const url = `https://newsapi.org/v2/everything?q=politics&from=2023-02-06&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/everything?q=politics&from=2023-02-13&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
@@ -129,7 +129,7 @@ app.get('/politics', async (req, res) => {
 });
 
 app.get('/world', async (req, res) => { 
-  const url = `https://newsapi.org/v2/top-headlines?category=general&from=2023-02-06&language=en&apiKey=${api_key}`;
+  const url = `https://newsapi.org/v2/top-headlines?category=general&from=2023-02-13&language=en&apiKey=${api_key}`;
   
   const response = await fetch(url)
   .then(res => res.json())  
